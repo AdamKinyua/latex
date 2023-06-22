@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{Mathematical notation}
+\author{adam kinyua}
+\date{today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+
+\iffalse
+------------------------------------------------------
+-> typing equations inside the paragraph
+------------------------------------------------------
+\fi
+
+
+Typing an equation inside a paragraph is supposed to be like \(x+y=z\). It makes everything look amazing. Alternatively, you can also write it like $x+y=z$. This too works the same as the other one. We can also create a space above and below the equation by $$x+y=z$$It ensures that the equation stands out by itself. Alternatively, this too \[x+y=z\]does as the preceding.
+
+
+\iffalse
+------------------------------------------------------
+-> the equations and align environments - allowing labelling and numbering of equations so we can refer to them later on. you must use 
+-> this is where we make use of \usepackage{amsmath}
+------------------------------------------------------
+\fi
+
+
+\begin{equation}
+x+y=z \label{eq:first}
+\end{equation}
+\noindent According to equation \ref{eq:first} above. However, this is considered a separate paragraph
+If we want our equation referenced to to have a parenthesis then we use \eqref{eq:first}
+
+
+\iffalse
+------------------------------------------------------
+-> if we have more than one equation; check the alignments below:
+------------------------------------------------------
+\fi
+
+
+\begin{align}
+x+y=z \\
+a+b+d=c 
+\end{align}
+
+\begin{align}
+x&+y+v=z \\
+a&+b+=c 
+\end{align}
+
+\iffalse
+------------------------------------------------------
+-> more environments - we only want numbers in equations we want to refer to later
+------------------------------------------------------
+\fi
+
+If we do not want to have a number in an equation:
+
+\begin{align}
+x&+y+v=z \nonumber \\
+a&+b+=c 
+\end{align}
+
+If we want these equations to have no numbers:
+\begin{align*}
+x&+y+v=z \nonumber \\
+a&+b+=c 
+\end{align*}
+
+
+\iffalse
+------------------------------------------------------
+MATH SYMBOLS AND GREEK LETTERS
+- start by creating a mathematical environment using \( and \)
+------------------------------------------------------
+\fi
+
+\(
+\alpha \beta \gamma \delta \omega \hspace{1cm}  \Alpha \Beta \Gamma \Delta \Omega
+\)
+
+
+\end{document}
